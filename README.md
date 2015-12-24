@@ -69,5 +69,5 @@ TypeScriptはMicrosoft社が開発しているAltJSの1つです。AltJSとは�
 
 [参考記事](https://html5experts.jp/vvakame/16241/ "参考記事")
 
-# The MIT License (MIT)
-## Copyright (c) 2015 Daiki Yoshioka
+The MIT License (MIT)
+Copyright (c) 2015 Daiki Yoshioka
