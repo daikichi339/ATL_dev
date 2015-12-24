@@ -13,12 +13,12 @@ var reload = browserSync.reload;
 //jade
 gulp.task("jade", function(){
   gulp.src([
-    "../jade/**/*.jade",
-    "!../jade/include/*.jade"
+    "../source/jade/**/*.jade",
+    "!../source/jade/include/*.jade"
   ])
     .pipe(plumber())
     .pipe(data(function(file) {
-      return require('../json/common.json');
+      return require('../source/json/common.json');
     }))
     .pipe(jade())
     .pipe(prettify())
@@ -28,8 +28,8 @@ gulp.task("jade", function(){
 //less
 gulp.task("less", function() {
   gulp.src([
-    "../less/**/*.less",
-    "!../less/**/_*.less"
+    "../source/less/**/*.less",
+    "!../source/less/**/_*.less"
   ])
     .pipe(plumber())
     .pipe(sourcemaps.init())
@@ -42,8 +42,8 @@ gulp.task("less", function() {
 //typescript
 gulp.task("typescript", function(){
   gulp.src([
-    "../typescript/**/*.ts",
-    "!../typescript/**/_*.ts"
+    "../source/typescript/**/*.ts",
+    "!../source/typescript/**/_*.ts"
   ])
     .pipe(sourcemaps.init())
     .pipe(typescript({
@@ -62,9 +62,9 @@ gulp.task("default", function() {
       baseDir: "../",
     }
   });
-  gulp.watch("../**/*.ts",["typescript"]);
-  gulp.watch("../**/*.jade",["jade"]);
-  gulp.watch("../**/*.less",["less"]);
+  gulp.watch("../source/**/*.ts",["typescript"]);
+  gulp.watch("../source/**/*.jade",["jade"]);
+  gulp.watch("../source/**/*.less",["less"]);
   gulp.watch("../**/*.js", reload);
   gulp.watch("../**/*.css", reload);
   gulp.watch("../**/*.html", reload);
