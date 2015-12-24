@@ -60,6 +60,7 @@ gulp.task("default", function() {
     port: 3000,
     server: {
       baseDir: "../",
+      //proxy: "192.168.33.10"
     }
   });
   gulp.watch("../source/**/*.ts",["typescript"]);
