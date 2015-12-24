@@ -14,3 +14,51 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+# 環境構築
+nodeベースの開発環境のため、node.jsの導入及びnpmが必須となります。
+```
+$ npm install -g gulp           //タスクランナー
+$ npm install -g browser-sync   //ブラウザツール
+```
+
+# ディレクトリ構成
+```
+/
+├── gulp            1. gulpディレクトリ
+│   ├── gulpfile.js
+│   ├── node_modules
+│   └── package.json
+├── source          2. コードディレクトリ
+│   ├── jade
+│   ├── json
+│   ├── less
+│   └── typescript
+├── css             cssディレクトリ
+├── js              jsディレクトリ
+└── img             画像ディレクトリ
+```
+
+## 1. gulpディレクトリ
+gulpはnode.jsベースのタスクランナーとなります。使い方は以下となります。
+
+```
+$ cd /gulp  gulpディレクトリへ移動
+$ gulp      gulpを起動
+```
+
+また、以下の設定ファイルにtaskを設定することでコンパイルや自動リロードを自動化できます。
+```
+$ vi /gulp/gulpfile.js
+
+```
+初期設定では、以下が設定されております。
+* Jadeコンパイル
+
+* LESSコンパイル
+
+* Typesctiptコンパイル
+
+* ブラウザの自動リロード
+
+* localhost:3000の利用
