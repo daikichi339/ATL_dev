@@ -1,0 +1,31 @@
+{
+	"site": {
+		"name": "site1",
+		"url": "http://xxx.jp/",
+		"path": "http://xxx.jp/"
+	},
+	"company": {
+		"name": "company1",
+		"tel": "00-0000-0000",
+		"email": "info@xxx.co.jp",
+		"address": "東京都文京区"
+	},
+	"seo": {
+		"title": "title1",
+		"keyword": "keyword1,keyword2,keyword3",
+		"description": "description"
+	},
+	"ogp": {
+		"title": "title2",
+		"type": "website",
+		"description": "description",
+		"name": "sitename"
+	},
+	"fb": {
+		"page": "https://www.facebook.com/facebook"
+	},
+	"tw": {
+		"user": "@user",
+		"card": "summary"
+	}
+}

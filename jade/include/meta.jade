@@ -1,0 +1,23 @@
+meta(charset="UTF-8")
+meta(content="width=device-width", name="viewport")
+meta(content="#{seo.keyword}", name="keyword")
+meta(content="#{seo.description}", name="description")
+meta(content="#{ogp.title}", property="og:title")
+meta(content="#{ogp.type}", property="og:type")
+meta(content="#{ogp.description}", property="og:description")
+meta(content="#{site.url}", property="og:url")
+meta(content="#{site.url}/img/ogp.jpg", property="og:image")
+meta(content="#{ogp.name}", property="og:site_name")
+meta(content="#{company.email}", property="og:email")
+meta(content="#{tw.user}", name="twitter:site")
+meta(content="#{tw.card}", name="twitter:card")
+title #{seo.title} | #{seo.description}
+link(href="img/favicon.ico", rel="shortcut icon")
+link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+link(href="css/style.css", rel="stylesheet")
+script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+script(src="js/main.js")
+!= '\n<!--[if lt IE 9]>\n'
+script(src="./javascripts/html5shiv.js")
+script(src="js/selectivizr-min.js")
+!= '\n<![endif]-->\n'
