@@ -1,5 +1,6 @@
 # 概要
 この開発環境はフロントエンド開発におけるベースとなります。プロジェクトごとにカスタマイズしご利用ください。
+基本的にはgulpを用いて自動コンパイルを実現しております。
 
 # 環境構築
 nodeベースの開発環境のため、node.jsの導入及びnpmが必須となります。
@@ -57,9 +58,16 @@ Jadeとは、JavaScript テンプレートエンジンであり、HTMLを書く�
 
 
 ### 2-2 LESS
+LESSは変数、ミックスイン、演算、そして関数のような動的な処理をCSSに追加拡張できます。 クライアントサイド(IE6+、Webkit、Firefox)、またnode.js、Rhinoを利用してサーバーサイドでも動作します。
+
+[LESS](http://less-ja.studiomohawk.com/)
 
 ### 2-3 TypeScript
+TypeScriptはMicrosoft社が開発しているAltJSの1つです。AltJSとは、ある言語Xから、JavaScriptへと変換（トランスパイル）して使う言語の総称です。Typeという名の通り、JavaScriptの世界に静的な型付けを持込み、JavaやC#のようにコンパイル時に整合性のチェックを行うことができるようにしたものです。
 
+[TypeScript](http://www.typescriptlang.org/ "TypeScript")
+
+[参考記事](https://html5experts.jp/vvakame/16241/ "参考記事")
 
 # The MIT License (MIT)
 ## Copyright (c) 2015 Daiki Yoshioka
