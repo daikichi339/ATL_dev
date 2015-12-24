@@ -40,16 +40,25 @@ $ vi /gulp/gulpfile.js
 ```
 初期設定では、以下が設定されております。
 * Jadeコンパイル
-
 * LESSコンパイル
-
 * Typesctiptコンパイル
-
 * ブラウザの自動リロード
-
 * localhost:3000の利用
 
 ## 2. コードディレクトリ
+このディレクトリでは、Jade,LESS,TypeScriptを格納しております。
+
+### 2-1. Jade
+Jadeとは、JavaScript テンプレートエンジンであり、HTMLを書くための軽量マークアップ言語です。
+
+[Jade](http://jade-lang.com/ "Jade")
+
+[参考記事](https://gist.github.com/japboy/5402844 "参考記事")
+
+
+### 2-2 LESS
+
+### 2-3 TypeScript
 
 
 # The MIT License (MIT)
