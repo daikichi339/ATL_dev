@@ -4,6 +4,15 @@
 
 # 環境構築
 nodeベースの開発環境のため、node.jsの導入及びnpmが必須となります。
+
+```
+//インストーラーをダウンロードしインストール。環境に応じてPATHを通す必要があります。
+https://nodejs.org/
+
+
+```
+
+
 ```
 $ npm install -g gulp           //タスクランナー
 $ npm install -g browser-sync   //ブラウザツール
