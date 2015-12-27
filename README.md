@@ -4,18 +4,17 @@
 
 # 環境構築
 nodeベースの開発環境のため、node.jsの導入及びnpmが必須となります。
+(個人的にはnodebrewなどのnode.jsのバージョン管理をおすすめします。)
 
 ```
 //インストーラーをダウンロードしインストール。環境に応じてPATHを通す必要があります。
 https://nodejs.org/
-
-
 ```
 
 
 ```
-$ npm install -g gulp           //タスクランナー
-$ npm install -g browser-sync   //ブラウザツール
+$ npm install -g gulp           //タスクランナーをグローバルインストール
+$ npm install -g browser-sync   //ブラウザツールをグローバルインストール
 ```
 
 # ディレクトリ構成
@@ -39,8 +38,9 @@ $ npm install -g browser-sync   //ブラウザツール
 gulpはnode.jsベースのタスクランナーとなります。使い方は以下となります。
 
 ```
-$ cd /gulp  gulpディレクトリへ移動
-$ gulp      gulpを起動
+$ cd /gulp        //gulpディレクトリへ移動
+$ npm install     //package.jsonに記述されているパッケージをローカルインストール
+$ gulp            //gulpを起動
 ```
 
 また、以下の設定ファイルにtaskを設定することでコンパイルや自動リロードを自動化できます。
