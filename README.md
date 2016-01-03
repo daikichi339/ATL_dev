@@ -5,6 +5,7 @@
 # 環境構築
 nodeベースの開発環境のため、node.jsの導入及びnpmが必須となります。
 (個人的にはnodebrewなどのnode.jsのバージョン管理をおすすめします。)
+[参考URL](http://qiita.com/Kackey/items/b41b11bcf1c0b0d76149)
 
 ```
 //インストーラーをダウンロードしインストール。環境に応じてPATHを通す必要があります。
@@ -15,6 +16,8 @@ https://nodejs.org/
 ```
 $ npm install -g gulp           //タスクランナーをグローバルインストール
 $ npm install -g browser-sync   //ブラウザツールをグローバルインストール
+$ npm install -g phantomjs@1.9.7-15   //phantomjsをグローバルインストール
+$ npm install -g casperjs       //casperjsをグローバルインストール
 ```
 
 # ディレクトリ構成
@@ -29,6 +32,7 @@ $ npm install -g browser-sync   //ブラウザツールをグローバルイン�
 │   ├── json
 │   ├── less
 │   └── typescript
+├── test            3. testコード
 ├── css             cssディレクトリ
 ├── js              jsディレクトリ
 └── img             画像ディレクトリ
@@ -77,6 +81,14 @@ TypeScriptはMicrosoft社が開発しているAltJSの1つです。AltJSとは�
 [TypeScript](http://www.typescriptlang.org/ "TypeScript")
 
 [参考記事](https://html5experts.jp/vvakame/16241/ "参考記事")
+
+## 3. testコード(CasperJS)
+CasperJSは、ヘッドレスブラウザのPhantomJSを使ってブラウザ操作やテストができるライブラリ。
+WebテストのデファクトであるSeleniumやそのGroovyラッパーのGeb（これが一番おすすめ）に比べて、インストールが簡単で、動作の軽量なのが特徴。
+
+[CasperJS](http://casperjs.org/ "CasperJS")
+
+[参考記事](http://qiita.com/itagakishintaro/items/dafb2eba120b226fcb61 "参考記事")
 
 The MIT License (MIT)
 Copyright (c) 2015 Daiki Yoshioka

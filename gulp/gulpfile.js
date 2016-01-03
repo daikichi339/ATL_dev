@@ -7,8 +7,9 @@ var prettify = require('gulp-prettify');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var plumber = require('gulp-plumber');
-var browserSync = require('browser-sync').create();
+var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var casperJs = require('gulp-casperjs');
 
 //jade
 gulp.task("jade", function(){
@@ -52,6 +53,12 @@ gulp.task("typescript", function(){
     }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("../js"));
+});
+
+//test
+gulp.task('test', function () {
+  gulp.src('../test/*.js')
+    .pipe(casperJs());
 });
 
 //watch & browserSync
