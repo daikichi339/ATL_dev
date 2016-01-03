@@ -11,4 +11,7 @@ $(function(){
   c.test(1);
   c.test(2);
   c.test(3);
+  $('#test_submit').on('click', function(){
+    $('#main').append('<p>testショット</p>');
+  });
 });

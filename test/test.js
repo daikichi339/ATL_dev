@@ -1,22 +1,20 @@
-casper.test.begin('Google検索テスト', function suite(test) {
-  casper.start('http://www.google.co.jp/', function () {
-    test.assertHttpStatus(200);
-    this.fillSelectors('form[action="/search"]', {
-      'input[name="q"]': 'サッカー'
-    }, true);
-    console.log('"サッカー"で検索します');
+casper.test.begin('name', function suite(test){
+  //user agent
+  casper.userAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36');
+
+  casper.start('../index.html', function(){
+    this.sendKeys('#test_input', 'testです');
+    this.click('#test_submit');
+    this.capture('../test/screen/test_01.png');
   });
 
-  casper.then(function () {
-    test.assertHttpStatus(200);
-    test.assertTitle('サッカー - Google 検索', '正しいタイトルです');
-    test.assertUrlMatch(/q=サッカー/, '正しい検索パラメータです');
-    test.assertEval(function () {
-      return __utils__.findAll('h3.r').length >= 10;
-    }, '"サッカー"の検索結果を10件以上取得しました');
+  casper.then(function(){
+    this.capture('../test/screen/test_02.png');
+    test.assertTitle('title1 | description');
   });
-
-  casper.run(function () {
+  
+  //実行
+  casper.run(function(){
     test.done();
   });
 });
