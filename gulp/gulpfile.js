@@ -14,7 +14,7 @@ var reload = browserSync.reload;
 gulp.task("jade", function(){
   gulp.src([
     "../source/jade/**/*.jade",
-    "!../source/jade/include/*.jade"
+    "!../source/jade/include/_*.jade"
   ])
     .pipe(plumber())
     .pipe(data(function(file) {
