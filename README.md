@@ -16,9 +16,13 @@ https://nodejs.org/
 
 # バージョン管理について
 node.jsはバージョンの更新速度が早いため、バージョン管理を行うことを推奨いたします。
-Win: nodist    //http://qiita.com/satoyan419/items/56e0b5f35912b9374305
-Mac: nodebrew  //http://qiita.com/sinmetal/items/154e81823f386279b33c
 
+```
+Win: nodist    // http://qiita.com/satoyan419/items/56e0b5f35912b9374305
+Mac: nodebrew  // http://qiita.com/sinmetal/items/154e81823f386279b33c
+```
+
+# グローバルインストール
 ```
 $ npm install -g gulp           //タスクランナーをグローバルインストール
 $ npm install -g browser-sync   //ブラウザツールをグローバルインストール
