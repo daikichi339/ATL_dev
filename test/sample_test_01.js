@@ -15,7 +15,7 @@ casper.test.begin('name', function suite(test){
   casper.then(function(){
     test.assertTitle('title1 | description');
   });
-  
+
   //実行
   casper.run(function(){
     test.done();

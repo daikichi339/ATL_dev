@@ -57,7 +57,7 @@ gulp.task("typescript", function(){
 
 //test
 gulp.task('test', function () {
-  gulp.src('../test/*.js')
+  gulp.src('../test/sample_test_02.js')
     .pipe(casperJs());
 });
 
