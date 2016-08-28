@@ -1,9 +1,12 @@
+# version
+ver.1.0.1
+
 # 概要
 この開発環境はフロントエンド開発におけるベースとなります。プロジェクトごとにカスタマイズしご利用ください。
 基本的にはgulpを用いて自動コンパイルを実現しております。
 
 # 環境構築
-nodeベースの開発環境のため、node.jsの導入及びnpmが必須となります。
+nodeベースの開発環境のため、node.jsの導入及びnpmが必須となります。node.jsの推奨バージョンはv4.2となります。
 (個人的にはnodebrewなどのnode.jsのバージョン管理をおすすめします。)
 [参考URL](http://qiita.com/Kackey/items/b41b11bcf1c0b0d76149)
 
@@ -12,7 +15,15 @@ nodeベースの開発環境のため、node.jsの導入及びnpmが必須とな
 https://nodejs.org/
 ```
 
+# バージョン管理について
+node.jsはバージョンの更新速度が早いため、バージョン管理を行うことを推奨いたします。
 
+```
+Win: nodist    // http://qiita.com/satoyan419/items/56e0b5f35912b9374305
+Mac: nodebrew  // http://qiita.com/sinmetal/items/154e81823f386279b33c
+```
+
+# グローバルインストール
 ```
 $ npm install -g gulp           //タスクランナーをグローバルインストール
 $ npm install -g browser-sync   //ブラウザツールをグローバルインストール
