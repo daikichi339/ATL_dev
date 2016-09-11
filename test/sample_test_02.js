@@ -14,7 +14,7 @@ casper.test.begin('capture', function suite(test){
 
   //user agent
   var width = 1280;
-  var height = 3000;
+  var height = 768;
   var ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36';
 
   casper.start();
