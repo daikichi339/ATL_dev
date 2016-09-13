@@ -1,0 +1,140 @@
+doctype html
+html
+  head
+    include include/_meta
+
+  body
+    #wrapper
+      include include/_header
+      
+      #contents
+        main
+          .strachar
+            p class-design: OOCSS
+            p class-rule: strachar & skin & size
+            p class-rule-stracher: positon, float, text, align, dispay etc...
+            p class-rule-skin: color
+            p class-rule-size: width, height, font, margin, padding etc...
+          
+          .layout-element
+            section.layout
+              section.area
+                section.block
+                  section.box
+                    section.group
+                    section.group
+                  section.box
+                    section.group
+                    section.group
+                section.block
+                  section.box
+                    section.group
+                    section.group
+                  section.box
+                    section.group
+                    section.group
+              section.area
+                section.block
+                  section.box
+                    section.group
+                    section.group
+                  section.box
+                    section.group
+                    section.group
+                section.block
+                  section.box
+                    section.group
+                    section.group
+                  section.box
+                    section.group
+                    section.group
+
+          .heading-elements
+            h1.heading title-h1
+            h2.heading title-h2
+            h3.heading title-h3
+            h4.heading title-h4
+            h5.heading title-h5
+            h6.heading title-h6
+            
+          .text-elements
+            p pragraph
+            p
+              a(href="#") anchor
+            p
+              em emphasis
+            p
+              strong strong
+            p
+              small small
+            p
+              b bold
+            p
+              span span
+            p
+              time time
+          
+          .button-elements
+            .btn
+              a(href="#") button
+
+          .list-elements
+            ul.list
+              li list1
+              li list2
+              li list3
+              li list4
+              li list5
+            ol.list
+              li list1
+              li list2
+              li list3
+              li list4
+              li list5
+            dl.list
+              dt list-dt
+              dd list-dd
+              
+          .block-element
+            figure
+            blockquote
+            hr
+
+          .form-element
+            form
+              filedset(name="")
+                label(for="form-text") form-text
+                input#form-text(type="text" name="" value="")
+              filedset(name="")
+                label(for="form-search") form-search
+                input#form-search(type="search" name="" value="")
+              filedset(name="")
+                label(for="form-tel") form-tel
+                input#form-tel(type="tel" name="" value="")
+              filedset(name="")
+                label(for="form-url") form-url
+                input#form-url(type="url" name="" value="")
+              filedset(name="")
+                label(for="form-email") form-email
+                input#form-email(type="email" name="" value="")
+              filedset(name="")
+                label(for="form-password") form-password
+                input#form-password(type="password" name="" value="")
+              filedset(name="")
+                label(for="form-checkbox") form-checkbox
+                input#form-checkbox(type="checkbox" name="" value="")
+              filedset(name="")
+                label(for="form-radio") form-radio
+                input#form-radio(type="radio" name="" value="")
+              filedset(name="")
+                label(for="form-select")
+                select#form-select(name="")
+              filedset(name="")
+                input#form-button(type="button" name="" value="form-button")
+              filedset(name="")
+                input#form-submit(type="submit" name="" value="form-submit")
+
+          
+      include include/_side
+
+      include include/_footer
