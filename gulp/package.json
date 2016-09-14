@@ -11,14 +11,15 @@
   "devDependencies": {
     "browser-sync": "^2.10.1",
     "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.0.1",
     "gulp-casperjs": "0.0.5",
     "gulp-data": "^1.2.0",
     "gulp-jade": "^1.1.0",
-    "gulp-less": "^3.0.3",
     "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^6.2.0",
     "gulp-prettify": "^0.3.0",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-typescript": "^2.10.0"
+    "gulp-typescript": "^2.10.0",
+    "postcss-cssnext": "^2.8.0",
+    "postcss-import": "^8.1.2",
   }
 }

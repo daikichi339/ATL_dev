@@ -1,0 +1,14 @@
+/*
+  color paletta
+*/
+:root {
+  --bg-color: #ccc;
+  --font-color: #000;
+}
+
+/*
+  number
+*/
+:root {
+  --main-size: 980px;
+}

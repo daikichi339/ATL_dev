@@ -1,15 +1,15 @@
 var gulp = require("gulp");
 var jade = require("gulp-jade");
 var data = require("gulp-data");
-var less = require("gulp-less");
 var typescript = require("gulp-typescript");
 var prettify = require('gulp-prettify');
-var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var plumber = require('gulp-plumber');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var casperJs = require('gulp-casperjs');
+var postcss = require("gulp-postcss");
+var cssnext = require("postcss-cssnext");
 
 //jade
 gulp.task("jade", function(){
@@ -26,18 +26,20 @@ gulp.task("jade", function(){
     .pipe(gulp.dest("../"));
 });
 
-//less
-gulp.task("less", function() {
+//css
+gulp.task("css", function() {
+  var plugin = [
+    require("postcss-import"),
+    cssnext({browsers: ['last 5 version']})
+  ];
   gulp.src([
-    "../source/less/**/*.less",
-    "!../source/less/**/_*.less"
+    "../source/css/**/*.css",
+    "!../source/css/**/_*.css"
   ])
-    .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(less())
-    .pipe(autoprefixer('last 3 version'))
+    .pipe(postcss(plugin))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest("../css"));
+    .pipe(gulp.dest("../css"))
 });
 
 //typescript
@@ -72,7 +74,7 @@ gulp.task("default", function() {
   });
   gulp.watch("../source/**/*.ts",["typescript"]);
   gulp.watch("../source/**/*.jade",["jade"]);
-  gulp.watch("../source/**/*.less",["less"]);
+  gulp.watch("../source/**/*.css",["css"]);
   gulp.watch("../**/*.js", reload);
   gulp.watch("../**/*.css", reload);
   gulp.watch("../**/*.html", reload);
