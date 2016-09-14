@@ -29,16 +29,14 @@ gulp.task("jade", function(){
 //css
 gulp.task("css", function() {
   var plugin = [
-    require("postcss-nested"),
     require("postcss-import"),
-    require("postcss-mixins"),
-    cssnext({browsers: ['last 3 version']})
+    cssnext({browsers: ['last 5 version']})
   ];
   gulp.src([
     "../source/css/**/*.css",
     "!../source/css/**/_*.css"
   ])
-    .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(postcss(plugin))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("../css"))
@@ -76,7 +74,7 @@ gulp.task("default", function() {
   });
   gulp.watch("../source/**/*.ts",["typescript"]);
   gulp.watch("../source/**/*.jade",["jade"]);
-  gulp.watch("../source/**/*.less",["less"]);
+  gulp.watch("../source/**/*.css",["css"]);
   gulp.watch("../**/*.js", reload);
   gulp.watch("../**/*.css", reload);
   gulp.watch("../**/*.html", reload);

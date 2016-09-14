@@ -21,7 +21,5 @@
     "gulp-typescript": "^2.10.0",
     "postcss-cssnext": "^2.8.0",
     "postcss-import": "^8.1.2",
-    "postcss-mixins": "^5.2.0",
-    "postcss-nested": "^1.0.0"
   }
 }
